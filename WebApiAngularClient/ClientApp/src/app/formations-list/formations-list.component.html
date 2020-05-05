@@ -1,0 +1,22 @@
+<p>formations-list works!</p>
+<p *ngIf="!formations"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="formations">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Nom</th>
+      <th>Url</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let formation of formations">
+      <td>{{ formation.id }}</td>
+      <td>{{ formation.nom }}</td>
+      <td>{{ formation.url }}</td>
+      <td>{{ formation.description }}</td>
+    </tr>
+  </tbody>
+</table>
+
